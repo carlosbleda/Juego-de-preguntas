@@ -1,0 +1,60 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#inicio {
+    background-color: brown;
+    color: white;
+    width: 200px;
+    font-size: 1rem;
+    border-radius: 40px;
+    padding: 20px 40px;
+    margin: 15px 45px 15px;
+}
+
+#categoria {
+    background: white;
+    width: 30rem;
+    padding: 6rem;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+    font-size: 3rem;
+}
+
+#preguntas {
+    font-size: 2rem;
+    color: black;
+}
+
+.botones {
+    background-color: brown;
+    color: white;
+    width: 200px;
+    font-size: 1rem;
+    border-radius: 40px;
+    padding: 20px 40px;
+    margin: 15px 45px 15px;
+}
+
+.botones:hover {
+    cursor: pointer;
+    background: #232323;
+}
+
+#progreso,
+#dificultad {
+    font-size: 20px;
+}
