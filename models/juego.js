@@ -25,14 +25,15 @@ export class Juego {
     eleccion(respuesta) {
 
         if (this.indice().respcorrecta(respuesta)) {
-            this.puntos++
+            this.puntos++;
         }
         this.i++;
+
 
     }
 
     fin() {
-
+        console.log();
         return this.pregunta.length === this.i;
     }
 

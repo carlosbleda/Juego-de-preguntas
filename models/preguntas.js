@@ -1,5 +1,3 @@
-import { arreglo } from "../data/coleccion.js";
-
 //@ts-check
 export class Preguntas {
     /**

@@ -16,7 +16,9 @@ export class Interface {
     mostraropciones(opciones, callback) {
         let botones = document.getElementById('opciones');
         botones.innerHTML = '';
+
         for (let i = 0; i < opciones.length; i++) {
+            console.log(opciones[Math.floor(Math.random() * opciones.length)]);
             const nuevoboton = document.createElement('button');
             nuevoboton.innerText = opciones[i];
             nuevoboton.className = 'botones';
@@ -24,12 +26,25 @@ export class Interface {
             nuevoboton.addEventListener('click', () => callback(opciones[i]));
             botones.append(nuevoboton)
 
+
+
         }
     }
-    mostrarpuntos() {
+    mostrarpuntos(score) {
+        const HTML = `
+          <h1>Result</h1>
+          <h2 id="score">Your scores: ${score}</h2>
+          <input type="button" value="Volver a Jugar"  id="reinicio">
+          
+          `;
 
+
+        const element = document.getElementById("categoria");
+        element.innerHTML = HTML;
     }
     progreso(indice, total) {
-        const elemento = document.getElementById('progreso')
+        var element = document.getElementById("progreso");
+        element.innerHTML = `Pregunta ${indice} de ${total}`;
+
     }
 }
