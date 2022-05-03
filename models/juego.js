@@ -4,6 +4,7 @@ import { Preguntas } from "../models/preguntas.js";
 export class Juego {
     i = 0
     puntos = 0
+    jugador = 'Invitado'
         /**
          * 
          * @param {Preguntas[]} pregunta arreglo de preguntas
@@ -31,10 +32,19 @@ export class Juego {
 
 
     }
-
-    fin() {
-        console.log();
-        return this.pregunta.length === this.i;
+    Jugador() {
+        if (this.jugador == 'invitado') {
+            console.log(this.jugador);
+        }
     }
+
+    fin(actual, respuesta) {
+
+        if (actual !== respuesta) {
+            console.log(this.puntos);
+        } else { return this.pregunta.length === this.i; }
+
+    }
+
 
 }
